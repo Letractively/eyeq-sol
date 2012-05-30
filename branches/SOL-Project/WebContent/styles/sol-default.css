@@ -1,0 +1,99 @@
+/* main elements */
+body,div,td {
+	font-family: 굴림, Gulim, 맑은 고딕, MalgunGothic, 나눔 고딕, NanumGothic, 돋움,
+		Dotum, 은돋움, Undotum, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+
+body {
+	background-color: #ffffff;
+	text-align: center;
+}
+
+#header {
+	margin: 1em;
+	height: 150px;
+	border: 8px dashed #dfdfdf;
+}
+
+#header p {
+	font-size: 3em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+#header a {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#wrapper {
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
+#content {
+	position: relative;
+	clear:both;
+	width: 100%;
+}
+
+#main {
+	position:relative;
+	overflow: hidden;
+	width: auto;
+	height: 300px;
+	border: 8px dashed #dfdfdf;
+	margin-left: 200px;
+	margin-right: 190px;
+}
+
+#main div {
+	font-size: 3em;
+	font-weight: bold;
+	margin-top: 100px;
+}
+
+#left-menu {
+	position: fixed;
+	border: 8px dashed #dfdfdf;
+	width: 160px;
+	height: 300px;
+	margin-left: 1em;
+}
+
+#left-menu span {
+	font-size: 1.5em;
+	font-weight: bold;
+	font-align: center;
+	margin-top: 10px;
+}
+
+#right-menu {
+	right: 1em;
+	position: fixed;
+	height: 300px;
+	border: 8px dashed #dfdfdf;
+	width: 160px;
+	top: 198px;
+}
+
+#right-menu div {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#footer {
+	position: relative;
+	margin: 1em;
+	height: 50px;
+	border: 8px dashed #dfdfdf;
+	clear: both;
+}
+
+#footer p {
+	font-size: 12px;
+	font-weight: bold;
+}
