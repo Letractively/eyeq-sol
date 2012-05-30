@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/test</property>
+		<property name="connection.username">test</property>
+		<property name="connection.password">test</property>
+		
+		<!-- <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+		<property name="connection.url">jdbc:hsqldb:mem:soltest</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password"></property> -->
+		
+		<property name="connection.autocommit">false</property>
+		
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">2</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<!-- <property name="dialect">org.hibernate.dialect.HSQLDialect</property> -->
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- 
+			hdm2ddl.auto 속성에는 create, create-drop, update, validate 가 있다 
+			create는 처음 테이블이 없을때 만들어주고 세션이 새로 시작될때마다 drop 후 다시 create 
+			create-drop 은 drop 후 create 하고 끝나면 다시 drop 
+			update 는 Entity 의 속성이 변경되면 자동으로 수정 
+			validate 는 테이블과 현재 Entity 의 속성이 맞는지 비교만. 
+		-->
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+		<property name="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</property>
+		<property name="hibernate.connection.charSet">UTF-8</property>
+	</session-factory>
+</hibernate-configuration>
