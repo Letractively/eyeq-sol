@@ -1,4 +1,4 @@
-package com.sol.eyeq.model.domain.user;
+package com.sol.eyeq.model.domain;
 
 import java.io.Serializable;
 import java.util.Date;
