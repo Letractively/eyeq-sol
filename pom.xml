@@ -305,7 +305,7 @@
 			</testResource>
 		</testResources>
 		<directory>${project.basedir}/target</directory>
-		<finalName>sol-engine</finalName>
+		<finalName>sol</finalName>
 
 		<pluginManagement>
 			<plugins>
