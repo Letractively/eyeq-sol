@@ -1,4 +1,4 @@
-package com.sol.eyeq.model.domain.user;
+package com.sol.eyeq.model.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,8 +7,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.sol.eyeq.model.domain.category.StudyCategory;
-import com.sol.eyeq.model.domain.room.StudyRoom;
 
 @Entity
 @Table(name = "user_detail")
