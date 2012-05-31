@@ -1,4 +1,4 @@
-package com.sol.eyeq.controller.category;
+package com.sol.eyeq.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
