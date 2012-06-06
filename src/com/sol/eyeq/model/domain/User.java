@@ -1,7 +1,7 @@
 package com.sol.eyeq.model.domain;
 
-import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +10,9 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,11 +23,14 @@ import javax.validation.constraints.Size;
 
 import com.sol.eyeq.model.type.UserGenderType;
 
-@Entity
-@Table(name = "user")
-public class StudyUser implements Serializable {
+/**
+ * User를 하나로 가져가서 필수랑 선택값.
+ * 
+ * */
 
-	private static final long serialVersionUID = -4770542413362350985L;
+@Entity
+@Table(name = "study_user")
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -73,34 +79,31 @@ public class StudyUser implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedDate;
 
+	@Column(name = "like_category")
+	private String likeCategory;
+
+	@Column(name = "like_room")
+	private String likeRoom;
+
+	private Integer grade;
+
+	@ManyToMany
+	@JoinTable(name = "JOIN_ROOM_USER", joinColumns = { @JoinColumn(name = "userSeq") }, inverseJoinColumns = { @JoinColumn(name = "roomSeq") })
+	private List<Room> rooms;
+
 	/**
-	 * 기본 생성자
+	 * @return the userSeq
 	 */
-	public StudyUser() {
+	public Long getUserSeq() {
+		return userSeq;
 	}
 
 	/**
-	 * @param email
-	 * @param nickName
-	 * @param userName
-	 * @param password
-	 * @param birthDay
-	 * @param userSex
-	 * @param createDate
-	 * @param modifiedDate
+	 * @param userSeq
+	 *            the userSeq to set
 	 */
-	public StudyUser(String email, String nickName, String userName,
-			String password, Date birthDay, UserGenderType userSex,
-			Date createDate, Date modifiedDate) {
-		super();
-		this.email = email;
-		this.nickName = nickName;
-		this.userName = userName;
-		this.password = password;
-		this.birthDay = birthDay;
-		this.userGender = userSex;
-		this.createDate = createDate;
-		this.modifiedDate = modifiedDate;
+	public void setUserSeq(Long userSeq) {
+		this.userSeq = userSeq;
 	}
 
 	/**
@@ -239,10 +242,63 @@ public class StudyUser implements Serializable {
 	}
 
 	/**
-	 * @return the userId
+	 * @return the likeCategory
 	 */
-	public long getUserSeq() {
-		return userSeq;
+	public String getLikeCategory() {
+		return likeCategory;
+	}
+
+	/**
+	 * @param likeCategory
+	 *            the likeCategory to set
+	 */
+	public void setLikeCategory(String likeCategory) {
+		this.likeCategory = likeCategory;
+	}
+
+	/**
+	 * @return the likeRoom
+	 */
+	public String getLikeRoom() {
+		return likeRoom;
+	}
+
+	/**
+	 * @param likeRoom
+	 *            the likeRoom to set
+	 */
+	public void setLikeRoom(String likeRoom) {
+		this.likeRoom = likeRoom;
+	}
+
+	/**
+	 * @return the grade
+	 */
+	public Integer getGrade() {
+		return grade;
+	}
+
+	/**
+	 * @param grade
+	 *            the grade to set
+	 */
+	public void setGrade(Integer grade) {
+		this.grade = grade;
+	}
+
+	/**
+	 * @return the rooms
+	 */
+	public List<Room> getRooms() {
+		return rooms;
+	}
+
+	/**
+	 * @param rooms
+	 *            the rooms to set
+	 */
+	public void setRooms(List<Room> rooms) {
+		this.rooms = rooms;
 	}
 
 }
