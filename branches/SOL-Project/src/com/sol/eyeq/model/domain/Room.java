@@ -73,7 +73,7 @@ public class Room {
 	private List<Board> boards;
 
 	@ManyToMany
-	@JoinTable(name = "JOIN_ROOM_USER", joinColumns = { @JoinColumn(name = "roomSeq") }, inverseJoinColumns = { @JoinColumn(name = "userSeq") })
+	@JoinTable(name = "JOIN_ROOM_USER", joinColumns = { @JoinColumn(name = "room_Seq") }, inverseJoinColumns = { @JoinColumn(name = "user_Seq") })
 	private List<User> users;
 
 	/**
