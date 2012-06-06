@@ -88,7 +88,7 @@ public class User {
 	private Integer grade;
 
 	@ManyToMany
-	@JoinTable(name = "JOIN_ROOM_USER", joinColumns = { @JoinColumn(name = "userSeq") }, inverseJoinColumns = { @JoinColumn(name = "roomSeq") })
+	@JoinTable(name = "JOIN_ROOM_USER", joinColumns = { @JoinColumn(name = "user_Seq") }, inverseJoinColumns = { @JoinColumn(name = "room_Seq") })
 	private List<Room> rooms;
 
 	/**
