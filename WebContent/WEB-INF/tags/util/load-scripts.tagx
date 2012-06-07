@@ -5,7 +5,7 @@
 
 	<jsp:output omit-xml-declaration="yes" />
 
-	<spring:theme code="solDefaultStyleSheet" var="sol_default_css" />
+	<spring:theme code="styleSheet" var="sol_default_css" />
 	
 	<spring:url value="/${sol_default_css}" var="sol_default_css_url" />
 	<spring:url value="/resources/dojo/dojo.js" var="dojo_url" />
