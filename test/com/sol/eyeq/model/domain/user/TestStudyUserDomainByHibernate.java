@@ -11,7 +11,7 @@ import org.hibernate.service.ServiceRegistryBuilder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.sol.eyeq.model.domain.StudyUser;
+import com.sol.eyeq.model.domain.User;
 import com.sol.eyeq.model.type.UserGenderType;
 
 public class TestStudyUserDomainByHibernate {
@@ -20,13 +20,13 @@ public class TestStudyUserDomainByHibernate {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		
+
 		Configuration cfg = new Configuration();
 		cfg.configure();
 		ServiceRegistry sr = new ServiceRegistryBuilder().applySettings(
 				cfg.getProperties()).buildServiceRegistry();
 		try {
-			sessionFactory = cfg.configure().addAnnotatedClass(StudyUser.class)
+			sessionFactory = cfg.configure().addAnnotatedClass(User.class)
 					.buildSessionFactory(sr);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -37,7 +37,7 @@ public class TestStudyUserDomainByHibernate {
 	public void testUserDomain() {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		StudyUser user = new StudyUser();
+		User user = new User();
 		user.setBirthDay(new Date());
 		user.setCreateDate(new Date());
 		user.setUserName("이하나");
