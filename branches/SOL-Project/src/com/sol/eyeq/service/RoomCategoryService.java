@@ -5,10 +5,6 @@ import java.util.List;
 import com.sol.eyeq.model.domain.Category;
 import com.sol.eyeq.model.domain.Room;
 
-/**
- * @author 1106303
- * 
- */
 public interface RoomCategoryService {
 
 	/**
@@ -25,7 +21,7 @@ public interface RoomCategoryService {
 	 * @param categories
 	 */
 	void deleteCategories(List<Category> categories);
-	
+
 	/**
 	 * @param category
 	 */
