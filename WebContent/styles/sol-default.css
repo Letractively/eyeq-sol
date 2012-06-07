@@ -7,8 +7,9 @@ body,div,td {
 }
 
 body {
-	background-color: #ffffff;
+	background-color: #F1F1F1;
 	text-align: center;
+	height: 100%;
 }
 
 #header {
@@ -33,14 +34,15 @@ body {
 	overflow: hidden;
 	display: block;
 }
+
 #content {
 	position: relative;
-	clear:both;
+	clear: both;
 	width: 100%;
 }
 
 #main {
-	position:relative;
+	position: relative;
 	overflow: hidden;
 	width: auto;
 	height: 300px;
