@@ -5,10 +5,6 @@ import java.util.List;
 import com.sol.eyeq.model.domain.Room;
 import com.sol.eyeq.model.domain.User;
 
-/**
- * @author 1106303
- * 
- */
 public interface UserService {
 
 	/**

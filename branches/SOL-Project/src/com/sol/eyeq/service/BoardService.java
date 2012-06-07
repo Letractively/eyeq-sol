@@ -5,14 +5,6 @@ import java.util.List;
 import com.sol.eyeq.model.domain.Board;
 import com.sol.eyeq.model.domain.Room;
 
-/**
- * @author 1106303
- * 
- */
-/**
- * @author 1106303
- * 
- */
 public interface BoardService {
 
 	/**
