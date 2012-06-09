@@ -25,6 +25,11 @@ public interface BoardService {
 	/**
 	 * @param board
 	 */
+	void mergeUpdateBoards(Board board);
+
+	/**
+	 * @param board
+	 */
 	void deleteBoard(Board board);
 
 	/**
