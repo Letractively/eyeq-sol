@@ -40,4 +40,10 @@ public interface RoomCategoryService {
 	 */
 	List<Room> showCategoryInRoom(Category category, int listCount);
 
+	/**
+	 * @param category
+	 * @return
+	 */
+	Integer getRoomsCount(int cateSeq);
+
 }
