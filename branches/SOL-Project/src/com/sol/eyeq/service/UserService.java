@@ -20,12 +20,17 @@ public interface UserService {
 	/**
 	 * @param user
 	 */
-	void deleteUser(User user);
+	void deleteUser(int userSeq);
+	
+	/**
+	 * @param user
+	 */
+	void mergeUpdateUser(User user);
 
 	/**
 	 * @param users
 	 */
-	void deleteUsers(List<User> users);
+	void deleteUsers(List<Integer> userSeq);
 
 	/**
 	 * @param userSeq
@@ -68,4 +73,10 @@ public interface UserService {
 	 * @return
 	 */
 	boolean userJoinResponseStudyRoom(User user, Room room);
+	
+	/**
+	 * @param userSeq
+	 * @return
+	 */
+	Integer getRoomsCount(int userSeq);
 }

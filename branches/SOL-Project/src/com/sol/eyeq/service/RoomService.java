@@ -2,6 +2,7 @@ package com.sol.eyeq.service;
 
 import java.util.List;
 
+import com.sol.eyeq.model.domain.Category;
 import com.sol.eyeq.model.domain.Room;
 import com.sol.eyeq.model.domain.User;
 
@@ -16,6 +17,11 @@ public interface RoomService {
 	void createStudyRoom(Room room);
 
 	/**
+	 * @param room
+	 */
+	void mergeUpdateStudyRoom(Room room);
+
+	/**
 	 * 룸 정보 수정. 만약 스탭을 넘기지 않을 경우 updateStudyRoom 에서 스탭2 스탭3 처리.
 	 * 
 	 * @param room
@@ -25,28 +31,40 @@ public interface RoomService {
 	/**
 	 * 스터디 룸 을 생성한 사람에 의해 또는 스터디가 끝남으로써 자동으로 실행되는 메소드임.
 	 * 
-	 * @param rooms
+	 * @param roomSeq
 	 */
-	void deleteStudyRooms(List<Room> rooms);
+	void deleteStudyRooms(List<Integer> roomSeq);
 
 	/**
 	 * 하나만 지울경우.
 	 * 
-	 * @param room
+	 * @param roomSeq
 	 */
-	void deleteStudyRoom(Room room);
+	void deleteStudyRoom(int roomSeq);
 
 	/**
 	 * 룸 정보를 보여줌
 	 * 
-	 * @param room
+	 * @param roomSeq
 	 * @return
 	 */
-	Room showStudyRoomInfo(int roomSeq);
+	Room getStudyRoom(int roomSeq);
 
 	/**
-	 * @param room
+	 * @param roomSeq
 	 * @return
 	 */
-	List<User> showUsersInRoom(Room room);
+	List<User> getUsersByRoomSeq(int roomSeq);
+	
+	/**
+	 * @param roomSeq
+	 * @return
+	 */
+	Category getCategoryByRoomSeq(int roomSeq);
+	
+	/**
+	 * @param roomSeq
+	 * @return
+	 */
+	Integer getBoardsCount(int roomSeq);
 }
