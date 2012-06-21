@@ -1,8 +1,8 @@
 package com.sol.eyeq.service;
 
+import java.io.Serializable;
 import java.util.List;
 
-import com.sol.eyeq.model.domain.Category;
 import com.sol.eyeq.model.domain.Room;
 import com.sol.eyeq.model.domain.User;
 
@@ -14,12 +14,7 @@ public interface RoomService {
 	 * 
 	 * @param room
 	 */
-	void createStudyRoom(Room room);
-
-	/**
-	 * @param room
-	 */
-	void mergeUpdateStudyRoom(Room room);
+	Serializable createStudyRoom(Room room);
 
 	/**
 	 * 룸 정보 수정. 만약 스탭을 넘기지 않을 경우 updateStudyRoom 에서 스탭2 스탭3 처리.
@@ -31,16 +26,16 @@ public interface RoomService {
 	/**
 	 * 스터디 룸 을 생성한 사람에 의해 또는 스터디가 끝남으로써 자동으로 실행되는 메소드임.
 	 * 
-	 * @param roomSeq
+	 * @param rooms
 	 */
-	void deleteStudyRooms(List<Integer> roomSeq);
+	void deleteStudyRooms(List<Room> rooms);
 
 	/**
 	 * 하나만 지울경우.
 	 * 
-	 * @param roomSeq
+	 * @param room
 	 */
-	void deleteStudyRoom(int roomSeq);
+	void deleteStudyRoom(Room room);
 
 	/**
 	 * 룸 정보를 보여줌
@@ -48,23 +43,11 @@ public interface RoomService {
 	 * @param roomSeq
 	 * @return
 	 */
-	Room getStudyRoom(int roomSeq);
+	Room getStudyRoomByRoomSeq(int roomSeq);
 
 	/**
-	 * @param roomSeq
+	 * @param room
 	 * @return
 	 */
-	List<User> getUsersByRoomSeq(int roomSeq);
-	
-	/**
-	 * @param roomSeq
-	 * @return
-	 */
-	Category getCategoryByRoomSeq(int roomSeq);
-	
-	/**
-	 * @param roomSeq
-	 * @return
-	 */
-	Integer getBoardsCount(int roomSeq);
+	List<User> getUsersInRoom(Room room);
 }

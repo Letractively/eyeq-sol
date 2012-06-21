@@ -1,5 +1,6 @@
 package com.sol.eyeq.service;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.sol.eyeq.model.domain.Room;
@@ -10,7 +11,7 @@ public interface UserService {
 	/**
 	 * @param user
 	 */
-	void createUser(User user);
+	Serializable createUser(User user);
 
 	/**
 	 * @param user
@@ -20,23 +21,18 @@ public interface UserService {
 	/**
 	 * @param user
 	 */
-	void deleteUser(int userSeq);
-	
-	/**
-	 * @param user
-	 */
-	void mergeUpdateUser(User user);
+	void deleteUser(User user);
 
 	/**
 	 * @param users
 	 */
-	void deleteUsers(List<Integer> userSeq);
+	void deleteUsers(List<User> users);
 
 	/**
 	 * @param userSeq
 	 * @return
 	 */
-	User showUserInfo(int userSeq);
+	User getUserInfo(int userSeq);
 
 	/**
 	 * 유저가 참여한 룸 목록
@@ -45,16 +41,18 @@ public interface UserService {
 	 * @param listCount
 	 * @return
 	 */
-	List<Room> showUserJoinStudyRoom(User user, int listCount);
+	List<Room> getUserJoinStudyRoom(User user, int startCount, int listCount);
 
 	/**
 	 * 유저가 룸장으로 생성한 룸 목록
 	 * 
 	 * @param user
+	 * @param startCount
 	 * @param listCount
 	 * @return
 	 */
-	List<Room> showUserModeratorsStudyRoom(User user, int listCount);
+	List<Room> getUserModeratorsStudyRoom(User user, int startCount,
+			int listCount);
 
 	/**
 	 * 유저가 스터디 그룹에 참여 요청
@@ -73,10 +71,4 @@ public interface UserService {
 	 * @return
 	 */
 	boolean userJoinResponseStudyRoom(User user, Room room);
-	
-	/**
-	 * @param userSeq
-	 * @return
-	 */
-	Integer getRoomsCount(int userSeq);
 }
