@@ -1,5 +1,6 @@
 package com.sol.eyeq.service;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.sol.eyeq.model.domain.Board;
@@ -10,7 +11,7 @@ public interface BoardService {
 	/**
 	 * @param board
 	 */
-	void createBoard(Board board);
+	Serializable createBoard(Board board);
 
 	/**
 	 * @param board
@@ -25,18 +26,30 @@ public interface BoardService {
 	/**
 	 * @param board
 	 */
-	void mergeUpdateBoards(Board board);
+	void deleteBoard(Board board);
 
 	/**
 	 * @param board
 	 */
-	void deleteBoard(Board board);
-
+	void mergeUpdateBoards(Board board);
+	
 	/**
-	 * 룸에 해당하는 보드를 출력
-	 * 
 	 * @param room
+	 * @param startCount
+	 * @param listCount
 	 * @return
 	 */
-	List<Board> showBoardsInRoom(Room room, int listCount);
+	List<Board> getBoardsInRoom(Room room, int startCount, int listCount);
+
+	/**
+	 * @param room
+	 * @param startCount
+	 * @param listCount
+	 * @param searchType
+	 * @param searchKeyword
+	 * @return
+	 */
+	List<Board> getBoardsInRoom(Room room, int startCount, int listCount,
+			String searchType, String searchKeyword);
+
 }
