@@ -1,5 +1,6 @@
 package com.sol.eyeq.model.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,7 +12,11 @@ public class Friend {
 	@JoinColumn(name = "USER_SEQ", insertable = true, updatable = true)
 	private User user;
 
-	private String friend;
+	@Column(name = "FRIEND_SEQ")
+	private String friendSeq;
+
+	@Column(name = "IS_FRIEND")
+	private Boolean isFriend;
 
 	/**
 	 * @return the user
@@ -29,18 +34,33 @@ public class Friend {
 	}
 
 	/**
-	 * @return the friend
+	 * @return the friendSeq
 	 */
-	public String getFriend() {
-		return friend;
+	public String getFriendSeq() {
+		return friendSeq;
 	}
 
 	/**
-	 * @param friend
-	 *            the friend to set
+	 * @param friendSeq
+	 *            the friendSeq to set
 	 */
-	public void setFriend(String friend) {
-		this.friend = friend;
+	public void setFriendSeq(String friendSeq) {
+		this.friendSeq = friendSeq;
+	}
+
+	/**
+	 * @return the isFriend
+	 */
+	public Boolean getIsFriend() {
+		return isFriend;
+	}
+
+	/**
+	 * @param isFriend
+	 *            the isFriend to set
+	 */
+	public void setIsFriend(Boolean isFriend) {
+		this.isFriend = isFriend;
 	}
 
 }

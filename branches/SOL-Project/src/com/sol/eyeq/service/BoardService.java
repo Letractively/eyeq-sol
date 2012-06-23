@@ -31,8 +31,8 @@ public interface BoardService {
 	/**
 	 * @param board
 	 */
-	void mergeUpdateBoards(Board board);
-	
+	void mergeBoards(Board board);
+
 	/**
 	 * @param room
 	 * @param startCount
