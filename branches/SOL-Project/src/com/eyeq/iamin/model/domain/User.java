@@ -1,4 +1,4 @@
-package com.sol.eyeq.model.domain;
+package com.eyeq.iamin.model.domain;
 
 import java.util.Date;
 import java.util.List;
@@ -27,7 +27,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import com.sol.eyeq.model.type.UserGenderType;
+import com.eyeq.iamin.model.type.UserGenderType;
 
 /**
  * User를 하나로 가져가서 필수랑 선택값.

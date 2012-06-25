@@ -1,4 +1,4 @@
-package com.sol.eyeq.model.domain;
+package com.eyeq.iamin.model.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.sol.eyeq.model.type;
+package com.eyeq.iamin.model.type;
 
 public enum UserGenderType {
 

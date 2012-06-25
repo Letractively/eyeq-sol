@@ -1,13 +1,13 @@
-package com.sol.eyeq.service.impl;
+package com.eyeq.iamin.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sol.eyeq.model.domain.Category;
-import com.sol.eyeq.model.domain.Room;
-import com.sol.eyeq.service.RoomCategoryService;
+import com.eyeq.iamin.model.domain.Category;
+import com.eyeq.iamin.model.domain.Room;
+import com.eyeq.iamin.service.RoomCategoryService;
 
 @Transactional
 public class RoomCategoryServiceImpl implements RoomCategoryService {
