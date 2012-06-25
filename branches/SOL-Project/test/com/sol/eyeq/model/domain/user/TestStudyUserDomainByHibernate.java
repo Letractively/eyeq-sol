@@ -11,8 +11,8 @@ import org.hibernate.service.ServiceRegistryBuilder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.sol.eyeq.model.domain.User;
-import com.sol.eyeq.model.type.UserGenderType;
+import com.eyeq.iamin.model.domain.User;
+import com.eyeq.iamin.model.type.UserGenderType;
 
 public class TestStudyUserDomainByHibernate {
 
