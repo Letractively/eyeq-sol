@@ -38,10 +38,11 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.sol.eyeq.model.domain.User</value>
-				<value>com.sol.eyeq.model.domain.Board</value>
-				<value>com.sol.eyeq.model.domain.Category</value>
-				<value>com.sol.eyeq.model.domain.Room</value>
+				<value>com.eyeq.iamin.model.domain.User</value>
+				<value>com.eyeq.iamin.model.domain.Board</value>
+				<value>com.eyeq.iamin.model.domain.Category</value>
+				<value>com.eyeq.iamin.model.domain.Room</value>
+				<value>com.eyeq.iamin.model.domain.Friend</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
