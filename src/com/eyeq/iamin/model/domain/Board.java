@@ -1,4 +1,4 @@
-package com.sol.eyeq.model.domain;
+package com.eyeq.iamin.model.domain;
 
 import java.util.Date;
 

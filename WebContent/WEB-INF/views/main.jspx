@@ -11,4 +11,8 @@
 		arguments="${app_name}" htmlEscape="false" />
 		
 	<div>메인 콘텐츠 영역!!</div>
+	<div class="main-content main-content-header"></div>
+	<div class="main-content"></div>
+	<div class="main-content"></div>
+	<div class="main-content"></div>
 </div>

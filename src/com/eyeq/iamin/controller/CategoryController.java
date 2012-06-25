@@ -1,4 +1,4 @@
-package com.sol.eyeq.controller;
+package com.eyeq.iamin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.sol.eyeq.model.domain.Category;
-import com.sol.eyeq.service.RoomCategoryService;
+import com.eyeq.iamin.model.domain.Category;
+import com.eyeq.iamin.service.RoomCategoryService;
 
 @Controller
 public class CategoryController {
