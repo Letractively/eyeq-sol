@@ -1,12 +1,12 @@
 package com.eyeq.iamin.model.type;
 
-public enum UserGenderType {
+public enum GenderType {
 
 	M("Male"), F("Female");
 
 	private final String value;
 
-	private UserGenderType(String value) {
+	private GenderType(String value) {
 		this.value = value;
 	}
 
