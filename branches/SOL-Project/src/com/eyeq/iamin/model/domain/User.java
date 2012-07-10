@@ -27,7 +27,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import com.eyeq.iamin.model.type.UserGenderType;
+import com.eyeq.iamin.model.type.GenderType;
 
 /**
  * User를 하나로 가져가서 필수랑 선택값.
@@ -41,7 +41,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "user_seq")
-	private Long userSeq;
+	private Long seq;
 
 	@NotNull
 	@Column(unique = true)
@@ -56,25 +56,21 @@ public class User {
 	@NotNull
 	@Column(name = "name")
 	@Size(min = 1, max = 30)
-	private String userName;
+	private String name;
 
 	@NotNull
 	@Size(min = 1, max = 20)
 	private String password;
 
 	@NotNull
-	@Transient
-	private String confirmPassword;
-
-	@NotNull
 	@Column(name = "birth_date")
 	@Temporal(TemporalType.DATE)
-	private Date birthDay;
+	private Date birthday;
 
 	@NotNull
 	@Enumerated(EnumType.STRING)
 	@Column(name = "gender", length = 1)
-	private UserGenderType userGender;
+	private GenderType gender;
 
 	@NotNull
 	@Column(name = "reg_date")
@@ -102,18 +98,18 @@ public class User {
 	private List<Room> rooms;
 
 	/**
-	 * @return the userSeq
+	 * @return the seq
 	 */
-	public Long getUserSeq() {
-		return userSeq;
+	public Long getSeq() {
+		return seq;
 	}
 
 	/**
-	 * @param userSeq
-	 *            the userSeq to set
+	 * @param seq
+	 *            the seq to set
 	 */
-	public void setUserSeq(Long userSeq) {
-		this.userSeq = userSeq;
+	public void setSeq(Long seq) {
+		this.seq = seq;
 	}
 
 	/**
@@ -147,18 +143,18 @@ public class User {
 	}
 
 	/**
-	 * @return the userName
+	 * @return the name
 	 */
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
 
 	/**
-	 * @param userName
-	 *            the userName to set
+	 * @param name
+	 *            the name to set
 	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**
@@ -176,49 +172,35 @@ public class User {
 		this.password = password;
 	}
 
-	/**
-	 * @return the confirmPassword
-	 */
-	public String getConfirmPassword() {
-		return confirmPassword;
-	}
 
 	/**
-	 * @param confirmPassword
-	 *            the confirmPassword to set
+	 * @return the birthday
 	 */
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
-	}
-
-	/**
-	 * @return the birthDay
-	 */
-	public Date getBirthDay() {
-		return birthDay;
+	public Date getBirthday() {
+		return birthday;
 	}
 
 	/**
 	 * @param birthDay
-	 *            the birthDay to set
+	 *            the birthday to set
 	 */
-	public void setBirthDay(Date birthDay) {
-		this.birthDay = birthDay;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 
 	/**
-	 * @return the userSex
+	 * @return the gender
 	 */
-	public UserGenderType getUserGender() {
-		return userGender;
+	public GenderType getGender() {
+		return gender;
 	}
 
 	/**
-	 * @param userGender
-	 *            the userSex to set
+	 * @param gender
+	 *            the Gender to set
 	 */
-	public void setUserGender(UserGenderType userGender) {
-		this.userGender = userGender;
+	public void setGender(GenderType gender) {
+		this.gender = gender;
 	}
 
 	/**
