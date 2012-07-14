@@ -1,22 +1,43 @@
-package com.eyeq.iamin.model.domain;
+package com.eyeq.iamin.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
 public class Friend {
 
+	@Id
+	@GeneratedValue
+	private Integer friendSeq;
+
 	@ManyToOne
 	@JoinColumn(name = "USER_SEQ", insertable = true, updatable = true)
 	private User user;
 
-	@Column(name = "FRIEND_SEQ")
-	private String friendSeq;
+	@Column(name = "FRIEND_USER_SEQ")
+	private String friendUserSeq;
 
 	@Column(name = "IS_FRIEND")
 	private Boolean isFriend;
+
+	/**
+	 * @return the friendSeq
+	 */
+	public Integer getFriendSeq() {
+		return friendSeq;
+	}
+
+	/**
+	 * @param friendSeq
+	 *            the friendSeq to set
+	 */
+	public void setFriendSeq(Integer friendSeq) {
+		this.friendSeq = friendSeq;
+	}
 
 	/**
 	 * @return the user
@@ -34,18 +55,18 @@ public class Friend {
 	}
 
 	/**
-	 * @return the friendSeq
+	 * @return the friendUserSeq
 	 */
-	public String getFriendSeq() {
-		return friendSeq;
+	public String getFriendUserSeq() {
+		return friendUserSeq;
 	}
 
 	/**
-	 * @param friendSeq
-	 *            the friendSeq to set
+	 * @param friendUserSeq
+	 *            the friendUserSeq to set
 	 */
-	public void setFriendSeq(String friendSeq) {
-		this.friendSeq = friendSeq;
+	public void setFriendUserSeq(String friendUserSeq) {
+		this.friendUserSeq = friendUserSeq;
 	}
 
 	/**

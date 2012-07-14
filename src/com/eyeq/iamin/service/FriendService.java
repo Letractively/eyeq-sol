@@ -2,7 +2,7 @@ package com.eyeq.iamin.service;
 
 import java.util.List;
 
-import com.eyeq.iamin.model.domain.Friend;
+import com.eyeq.iamin.model.Friend;
 import com.eyeq.iamin.service.exception.AcceptException;
 import com.eyeq.iamin.service.exception.ProposeException;
 

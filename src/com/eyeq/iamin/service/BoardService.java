@@ -3,8 +3,8 @@ package com.eyeq.iamin.service;
 import java.io.Serializable;
 import java.util.List;
 
-import com.eyeq.iamin.model.domain.Board;
-import com.eyeq.iamin.model.domain.Room;
+import com.eyeq.iamin.model.Board;
+import com.eyeq.iamin.model.Room;
 
 public interface BoardService {
 

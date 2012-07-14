@@ -3,8 +3,8 @@ package com.eyeq.iamin.service;
 import java.io.Serializable;
 import java.util.List;
 
-import com.eyeq.iamin.model.domain.Category;
-import com.eyeq.iamin.model.domain.Room;
+import com.eyeq.iamin.model.Category;
+import com.eyeq.iamin.model.Room;
 
 /**
  * @author 1106303
@@ -45,7 +45,7 @@ public interface RoomCategoryService {
 	 * @param listCount
 	 * @return
 	 */
-	List<Room> getCategoryInRoom(Category category, int startCount,
+	List<Room> getRoomInCategory(Category category, int startCount,
 			int listCount);
 
 }
