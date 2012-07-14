@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eyeq.iamin.model.domain.Category;
+import com.eyeq.iamin.model.Category;
 import com.eyeq.iamin.service.RoomCategoryService;
 
 @Controller

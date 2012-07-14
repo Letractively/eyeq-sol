@@ -1,4 +1,4 @@
-package com.eyeq.iamin.model.domain;
+package com.eyeq.iamin.model;
 
 import java.util.Date;
 import java.util.List;
@@ -12,14 +12,13 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -88,8 +87,8 @@ public class User {
 	private String likeRoom;
 
 	private Integer grade;
-	
-	@OneToMany(targetEntity = Friend.class, mappedBy = "friend", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+
+	@OneToMany(targetEntity = Friend.class, mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@Fetch(value = FetchMode.SUBSELECT)
 	private List<Friend> friends;
 
@@ -171,7 +170,6 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 
 	/**
 	 * @return the birthday
@@ -291,6 +289,21 @@ public class User {
 	 */
 	public void setRooms(List<Room> rooms) {
 		this.rooms = rooms;
+	}
+
+	/**
+	 * @return the friends
+	 */
+	public List<Friend> getFriends() {
+		return friends;
+	}
+
+	/**
+	 * @param friends
+	 *            the friends to set
+	 */
+	public void setFriends(List<Friend> friends) {
+		this.friends = friends;
 	}
 
 }

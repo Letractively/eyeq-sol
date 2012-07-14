@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eyeq.iamin.model.domain.Category;
-import com.eyeq.iamin.model.domain.Room;
+import com.eyeq.iamin.model.Category;
+import com.eyeq.iamin.model.Room;
 import com.eyeq.iamin.service.RoomCategoryService;
 
 @Transactional
@@ -20,19 +20,19 @@ public class RoomCategoryServiceImpl implements RoomCategoryService {
 	@Override
 	public void updateCategory(Category category) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteCategories(List<Category> categories) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteCategory(Category category) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class RoomCategoryServiceImpl implements RoomCategoryService {
 	}
 
 	@Override
-	public List<Room> getCategoryInRoom(Category category, int startCount,
+	public List<Room> getRoomInCategory(Category category, int startCount,
 			int listCount) {
 		// TODO Auto-generated method stub
 		return null;
