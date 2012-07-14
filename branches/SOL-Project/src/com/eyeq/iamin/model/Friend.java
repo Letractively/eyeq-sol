@@ -19,7 +19,7 @@ public class Friend {
 	private User user;
 
 	@Column(name = "FRIEND_USER_SEQ")
-	private String friendUserSeq;
+	private Integer friendUserSeq;
 
 	@Column(name = "IS_FRIEND")
 	private Boolean isFriend;
@@ -57,7 +57,7 @@ public class Friend {
 	/**
 	 * @return the friendUserSeq
 	 */
-	public String getFriendUserSeq() {
+	public Integer getFriendUserSeq() {
 		return friendUserSeq;
 	}
 
@@ -65,7 +65,7 @@ public class Friend {
 	 * @param friendUserSeq
 	 *            the friendUserSeq to set
 	 */
-	public void setFriendUserSeq(String friendUserSeq) {
+	public void setFriendUserSeq(Integer friendUserSeq) {
 		this.friendUserSeq = friendUserSeq;
 	}
 
