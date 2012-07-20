@@ -3,6 +3,10 @@ package com.eyeq.iamin.service.impl;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eyeq.iamin.model.Category;
@@ -10,11 +14,16 @@ import com.eyeq.iamin.model.Room;
 import com.eyeq.iamin.service.RoomCategoryService;
 
 @Transactional
+@Service("roomCategoryService")
 public class RoomCategoryServiceImpl implements RoomCategoryService {
+
+	@Autowired
+	private SessionFactory factory;
 
 	@Override
 	public Serializable createCategory(Category category) {
-		return null;
+		Session session = factory.getCurrentSession();
+		return session.save(category);
 	}
 
 	@Override
@@ -47,5 +56,6 @@ public class RoomCategoryServiceImpl implements RoomCategoryService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }
