@@ -11,8 +11,8 @@ import org.hibernate.service.ServiceRegistryBuilder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.eyeq.iamin.model.domain.User;
-import com.eyeq.iamin.model.type.UserGenderType;
+import com.eyeq.iamin.model.User;
+import com.eyeq.iamin.model.type.GenderType;
 
 public class TestStudyUserDomainByHibernate {
 
@@ -38,14 +38,13 @@ public class TestStudyUserDomainByHibernate {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 		User user = new User();
-		user.setBirthDay(new Date());
+		user.setBirthday(new Date());
 		user.setCreateDate(new Date());
-		user.setUserName("이하나");
+		user.setName("이하나");
 		user.setEmail("voyaging@eyeq.co.kr");
 		user.setPassword("dlgksk");
-		user.setConfirmPassword("dlgksk");
 		user.setNickName("겨울나무");
-		user.setUserGender(UserGenderType.M);
+		user.setGender(GenderType.M);
 
 		try {
 			session.persist(user);
