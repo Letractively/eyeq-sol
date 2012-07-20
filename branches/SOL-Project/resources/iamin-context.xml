@@ -16,8 +16,8 @@
 			type="annotation" />
 	</context:component-scan>
 
-	
-	 <bean class="org.apache.commons.dbcp.BasicDataSource"
+
+	<bean class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close" id="dataSource">
 		<property name="driverClassName" value="${database.driverClassName}" />
 		<property name="url" value="${database.url}" />
@@ -38,11 +38,11 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.eyeq.iamin.model.domain.User</value>
-				<value>com.eyeq.iamin.model.domain.Board</value>
-				<value>com.eyeq.iamin.model.domain.Category</value>
-				<value>com.eyeq.iamin.model.domain.Room</value>
-				<value>com.eyeq.iamin.model.domain.Friend</value>
+				<value>com.eyeq.iamin.model.User</value>
+				<value>com.eyeq.iamin.model.Board</value>
+				<value>com.eyeq.iamin.model.Category</value>
+				<value>com.eyeq.iamin.model.Room</value>
+				<value>com.eyeq.iamin.model.Friend</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
