@@ -1,101 +1,271 @@
 /* main elements */
 body,div,td {
-	font-family: 援대┝, Gulim, 留묒� 怨좊뵓, MalgunGothic, �섎닎 怨좊뵓, NanumGothic, �뗭�,
-		Dotum, ��룍�� Undotum, Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #666;
+	font-family: 나눔고딕, NanumGothic, 굴림, Gulim, 맑은 고딕, MalgunGothic, 돋움,
+		Dotum, 은 돋움, Undotum, Arial, Helvetica, sans-serif;
 }
 
+/* webkit scrollbar */
+/* Let's get this party started */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 0 0 0 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, .2);
+	min-height: 28px;
+	padding: 100px 0 0;
+	box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0
+		rgba(0, 0, 0, .07);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+}
+/* webkit scrollbar end */
 body {
-	background-color: #F1F1F1;
-	text-align: center;
-	height: 100%;
+	background-color: #F3F3F3;
+	background-image: url("../images/bgTop.gif");
+	background-position: left top;
+	background-repeat: repeat-x;
+	margin: 0;
+	overflow-y: hidden;
+}
+
+.h-dsp {
+	display: none;
 }
 
 #header {
-	margin: 1em;
-	height: 150px;
-	border: 8px dashed #dfdfdf;
+	position: relative;
+	top: 10px;
+	height: 55px;
 }
 
-#header p {
-	font-size: 3em;
+#header .logo-container {
+	float: left;
+	position: relative;
+	left: 10px;
+}
+
+#header .login {
+	float: right;
+	position: absolute;
+	right: 10px;
+}
+
+#main-container {
+	position: relative;
+	height: 550px;
+}
+
+#left,#center,#right {
+	float: left;
+}
+
+/* -- right css -- */
+#right {
+	width: 200px;
+	background-color: transparent;
+}
+
+#right ul {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#right li {
+	padding: 0px 0px 15px 0px;
+	border-bottom: 1px solid #C9D0DA;
+	border-top: 1px solid #ffffff;
+}
+
+#right div {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-bottom: 0px 5px;
+}
+
+#right .summary {
+	padding-bottom: 5px;
+}
+
+#right .title {
+	font-size: 2em;
+	color: blue;
 	font-weight: bold;
+}
+
+#right .user_icons {
+	float: left;
+}
+
+#right .user_icons .user_icon {
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+
+#right .user_icons .green {
+	background-image: url(../images/right/user-green.png);
+}
+
+#right .user_icons .gray {
+	background-image: url(../images/right/user-gray.png);
+}
+
+#right .user_num {
+	float: right;
+	padding-right: 5px;
+	font-weight: bold;
+	color: #717780;
+}
+
+#right .user_icons {
+	width: 170px;
+}
+
+#right .user_num {
+	
+}
+
+/* -- left css -- */
+#left {
+	margin-right: 20px;
+}
+
+#left ul {
+	list-style: none;
+}
+
+#sidebar ul li {
+	list-style: none;
+}
+
+.text1 {
+	color: grey;
+}
+
+.text2 {
+	color: black;
+}
+
+/* -- center css -- */
+#center {
+	margin-right: 15px;
+	background-color: #FDFDFD;
+	border: 1px solid #D7D7D7;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+#join-list {
+	width: 800px;
+	overflow: hidden;
+	border-bottom: 1px solid #D7D7D7;
+}
+
+#join-list .space {
+	position: relative;
+}
+
+#join-list .list {
+	position: relative;
+	left: 2px;
+	top: 2px;
+	height: 100%;
+}
+
+#room-list {
+	height: 200px;
+	width: 800px;
+	overflow: auto;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#room-list .space {
+	position: relative;
+	height: 380px;
+}
+
+#room-list .list {
+	position: relative;
+	top: 0px;
+	left: 2px;
+}
+
+.room {
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.a1a {
+	-webkit-border-radius: 63px;
+	border-radius: 63px;
+	-moz-border-radius: 63px;
+	position: relative;
+	vertical-align: top;
+	z-index: 5;
+}
+
+.a3a {
+	color: #666;
+	display: table;
+	position: relative;
+	color: white;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.a4a {
+	display: table-cell;
+	text-align: center;
 	vertical-align: middle;
 }
 
-#header a {
-	font-size: 2em;
+#room-list {
+	height: 400px;
+	overflow-x: hidden;
+}
+
+.room-canvas {
+	left: 0;
+	position: absolute;
+	top: 0;
+	margin: 25px;
+}
+
+.p-num {
+	opacity: .5;
 	font-weight: bold;
+	font-size: 16px;
+	margin-top: 4px;
 }
 
-#wrapper {
-	width: 100%;
-	overflow: hidden;
-	display: block;
-}
-
-#content {
-	position: relative;
-	clear: both;
-	width: 100%;
-}
-
-#main {
-	position: relative;
-	overflow: hidden;
-	width: auto;
-	height: 300px;
-	border: 8px dashed #dfdfdf;
-	margin-left: 200px;
-	margin-right: 190px;
-}
-
-#main div {
-	font-size: 3em;
-	font-weight: bold;
-	margin-top: 100px;
-}
-
-#left-menu {
-	position: fixed;
-	border: 8px dashed #dfdfdf;
-	width: 160px;
-	height: 300px;
-	margin-left: 1em;
-}
-
-#left-menu span {
-	font-size: 1.5em;
-	font-weight: bold;
-	font-align: center;
-	margin-top: 10px;
-}
-
-#right-menu {
-	right: 1em;
-	position: fixed;
-	height: 300px;
-	border: 8px dashed #dfdfdf;
-	width: 160px;
-	top: 198px;
-}
-
-#right-menu div {
-	font-size: 1.5em;
-	font-weight: bold;
-	margin-top: 10px;
-}
-
-#footer {
-	position: relative;
-	margin: 1em;
-	height: 50px;
-	border: 8px dashed #dfdfdf;
-	clear: both;
-}
-
-#footer p {
-	font-size: 12px;
-	font-weight: bold;
+#room-list .new {
+	background-image: url("../images/icon_new.gif");
+	background-repeat: no-repeat;
+	background-position: 8px 8px;
 }

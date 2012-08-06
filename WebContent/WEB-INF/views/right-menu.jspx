@@ -1,8 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="right-menu" version="2.0">
-	
+	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="right" version="2.0">
+
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	<div>오른쪽 메뉴(룸 목록)</div>
+
+	<ul>
+		<li>
+			<div class="title">IT 모임</div>
+			<div class="summary">주제는 java Programing 입니다.</div>
+			<div class="user_status">
+				<div class="user_icons">
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon gray"></div>
+					<div class="user_icon gray"></div>
+					<div class="user_icon gray"></div>
+					<div class="user_icon gray"></div>
+				</div>
+				<div class="user_num">4</div>
+			</div>
+		</li>
+		<li>
+			<div class="title">TOEIC</div>
+			<div class="summary">오늘은 토</div>
+			<div class="user_status">
+				<div class="user_icons">
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon gray"></div>
+					<div class="user_icon gray"></div>
+				</div>
+				<div class="user_num">6</div>
+			</div>
+		</li>
+		<li>
+			<div class="title">IT 모임</div>
+			<div class="summary">주제는 java Programing 입니다.</div>
+			<div class="user_status">
+				<div class="user_icons">
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+				</div>
+				<div class="user_num">8</div>
+			</div>
+		</li>
+		<li>
+			<div class="title">IT 모임</div>
+			<div class="summary">주제는 java Programing 입니다.</div>
+			<div class="user_status">
+				<div class="user_icons">
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon green"></div>
+					<div class="user_icon gray"></div>
+					<div class="user_icon gray"></div>
+					<div class="user_icon gray"></div>
+					<div class="user_icon gray"></div>
+				</div>
+				<div class="user_num">4</div>
+			</div>
+		</li>
+	</ul>
 </div>

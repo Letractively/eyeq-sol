@@ -6,7 +6,7 @@
 	<jsp:output omit-xml-declaration="yes" />
 
 	<spring:theme code="styleSheet" var="sol_default_css" />
-	
+
 	<spring:url value="/${sol_default_css}" var="sol_default_css_url" />
 	<spring:url value="/resources/dojo/dojo.js" var="dojo_url" />
 	<spring:url value="/resources/dijit/themes/tundra/tundra.css"
@@ -15,26 +15,48 @@
 	<spring:url value="/resources/spring/Spring-Dojo.js"
 		var="spring_dojo_url" />
 	<spring:url value="/resources/images/favicon.ico" var="favicon" />
-	
+
 	<spring:url value="/resources/scripts/jquery-1.7.2.js" var="jquery_url" />
-	<spring:url value="/${sol_default_css}" var="sol_css_url" />
-	
+	<spring:url value="/resources/scripts/iamin.js" var="iamin_js_url" />
+
 	<link rel="stylesheet" type="text/css" href="${tundra_url}" />
 	<link rel="stylesheet" type="text/css" media="screen"
 		href="${sol_default_css_url}" />
 	<link rel="SHORTCUT ICON" href="${favicon}" />
-	
+
 	<!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
 	<c:set var="userLocale">
 		<c:set var="plocale">${pageContext.response.locale}</c:set>
 		<c:out value="${fn:replace(plocale, '_', '-')}" default="en" />
 	</c:set>
 
-	<script type="text/javascript">var djConfig = {parseOnLoad: false, isDebug: false, locale: '${fn:toLowerCase(userLocale)}'};</script>
+	<script type="text/javascript">
+		var djConfig = {parseOnLoad: false, isDebug: false, locale: '${fn:toLowerCase(userLocale)}'};
+	</script>
 
-	<script src="${dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
-	<script src="${spring_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
-	<script src="${spring_dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
-	<script src="${jquery_url}" type="text/javascript"></script>
-	<script language="JavaScript" type="text/javascript">dojo.require("dojo.parser");</script>
+	<script src="${dojo_url}" type="text/javascript"><!-- --></script>
+	<script src="${spring_url}" type="text/javascript"><!-- --></script>
+	<script src="${spring_dojo_url}" type="text/javascript"><!-- --></script>
+	<script src="${jquery_url}" type="text/javascript"><!-- --></script>
+	<script src="${iamin_js_url}" type="text/javascript"><!-- --></script>
+
+	<script language="JavaScript" type="text/javascript">
+		dojo.require("dojo.parser");
+	</script>
+
+	<script language="JavaScript" type="text/javascript">
+		jQuery(document).ready(function() {
+			var mainQuery = jQuery("#main-view");
+			if (jQuery.browser.msie)
+				mainQuery.addClass("ie");
+			else if (jQuery.browser.webkit)
+				mainQuery.addClass("webkit");
+			else if (jQuery.browser.mozilla)
+				mainQuery.addClass("mozilla");
+			else if (jQuery.browser.opera)
+				mainQuery.addClass("opera");
+				
+			iamin.util.createRoom();
+		});
+	</script>
 </jsp:root>

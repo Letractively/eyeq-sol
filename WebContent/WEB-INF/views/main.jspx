@@ -1,18 +1,331 @@
 <div xmlns:spring="http://www.springframework.org/tags"
 	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
-	xmlns:jsp="http://java.sun.com/JSP/Page" id="main" version="2.0">
-	
+	xmlns:jsp="http://java.sun.com/JSP/Page" id="center" version="2.0">
+
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	
+
 	<spring:message var="app_name" code="application_name"
 		htmlEscape="false" />
 	<spring:message var="title" code="welcome_titlepane"
 		arguments="${app_name}" htmlEscape="false" />
-		
-	<div>메인 콘텐츠 영역!!</div>
-	<div class="main-content main-content-header"></div>
-	<div class="main-content"></div>
-	<div class="main-content"></div>
-	<div class="main-content"></div>
+
+	<div class="main-view">
+		<div id="join-list">
+			<div class="space">
+				<div class="list">
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>1번룸</span>
+										<div class="p-num">4명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>2번룸</span>
+										<div class="p-num">4명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>3번룸</span>
+										<div class="p-num">4명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>JAVA</span>
+										<div class="p-num">5명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>C#</span>
+										<div class="p-num">5명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="room-list">
+			<div class="space">
+				<div class="list">
+					<div class="new room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>TDD</span>
+										<div class="p-num">4명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="new room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>spring</span>
+										<div class="p-num">7명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>EJB</span>
+										<div class="p-num">1명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>Javascript</span>
+										<div class="p-num">2명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>Javascript</span>
+										<div class="p-num">2명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+				</div>
+				<div class="list">
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>TDD</span>
+										<div class="p-num">4명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>spring</span>
+										<div class="p-num">7명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>EJB</span>
+										<div class="p-num">1명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>Javascript</span>
+										<div class="p-num">2명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>Javascript</span>
+										<div class="p-num">2명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+				</div>
+				<div class="list">
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>TDD</span>
+										<div class="p-num">4명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>spring</span>
+										<div class="p-num">7명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>EJB</span>
+										<div class="p-num">1명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>Javascript</span>
+										<div class="p-num">2명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+					<div class="room">
+						<div class="a1a"
+							style="height: 102px; width: 102px; margin: 25px;">
+							<div class="a2a">
+								<div class="a3a"
+									style="width: 75px; height: 102px; left: 15px; top: 2px;">
+									<div class="a4a">
+										<span>Javascript</span>
+										<div class="p-num">2명</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<canvas class="room-canvas" width="104px" height="104px" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
