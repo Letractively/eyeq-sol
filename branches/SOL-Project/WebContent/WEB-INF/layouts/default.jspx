@@ -21,14 +21,14 @@
 <title><spring:message code="welcome_h3" arguments="${app_name}" /></title>
 </head>
 
-<body class="sol-body">
+<body id="main-view" class="sol-body">
 	<div id="wrapper">
 		<tiles:insertAttribute name="header" ignore="true" />
-		<div id="content">
+		<div id="main-container">
 			<tiles:insertAttribute name="left-menu" ignore="true" />
 			<tiles:insertAttribute name="body" />
+			<tiles:insertAttribute name="right-menu" ignore="true" />
 		</div>
-		<tiles:insertAttribute name="right-menu" ignore="true" />
 		<tiles:insertAttribute name="footer" ignore="true" />
 	</div>
 </body>
