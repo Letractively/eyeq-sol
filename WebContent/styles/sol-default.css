@@ -79,74 +79,100 @@ body {
 }
 
 /* -- right css -- */
-#right {
-	width: 200px;
-	background-color: transparent;
+@font-face {
+    font-family: 'NanumGothic';
+
+    font-style: normal;
+    font-weight: normal;
+    src: local('NanumGothic'),  local('나눔고딕'),   url('http://commondatastorage.googleapis.com/fontfacekr-fonts/NanumGothic.woff');
+
 }
 
-#right ul {
+.right {
+	width : 210px;
+	height: 560px;
+	background-color : #F2F4F8;
+	overflow: auto;
+	overflow-x: hidden;
+	float: right;
+	font-family: 'NanumGothic','Malgun gothic';
+}
+
+.right ul {
 	list-style-type: none;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-#right li {
-	padding: 0px 0px 15px 0px;
+.right li {
+	padding-bottom : 5px;
 	border-bottom: 1px solid #C9D0DA;
 	border-top: 1px solid #ffffff;
+	cursor: pointer;
 }
 
-#right div {
+.right div {
 	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	padding-bottom: 0px 5px;
+	/*text-overflow: ellipsis;
+	white-space: nowrap;*/
+	padding-bottom : 0px 5px;
 }
 
-#right .summary {
-	padding-bottom: 5px;
+.right .summary {
+	padding : 5px 0px;
+	display: none;
+	font-size: 0.8em;
+	color: #979CA0;
 }
 
-#right .title {
-	font-size: 2em;
-	color: blue;
+.right .title {
+	font-size : 1em;
+	color: #303942;
 	font-weight: bold;
+	padding-bottom : 3px;
 }
 
-#right .user_icons {
+.right .user_icons {
 	float: left;
+	padding-top: 3px;
 }
 
-#right .user_icons .user_icon {
+.right .user_icons .user_icon {
 	background-position: center center;
 	background-repeat: no-repeat;
-	width: 16px;
-	height: 16px;
+	width: 16px ;
+	height: 16px ;
 	display: inline-block;
 }
 
-#right .user_icons .green {
+.right .user_icons .green {
 	background-image: url(../images/right/user-green.png);
 }
 
-#right .user_icons .gray {
+.right .user_icons .gray {
 	background-image: url(../images/right/user-gray.png);
 }
 
-#right .user_num {
+.right .user_num {
 	float: right;
-	padding-right: 5px;
+	padding-right : 5px;
 	font-weight: bold;
-	color: #717780;
+	color : #717780;
+}
+ 
+.right .user_icons {
+	width : 170px ;
 }
 
-#right .user_icons {
-	width: 170px;
-}
-
-#right .user_num {
+.right .user_num {
 	
+}
+
+.left_popup {
+	display: none;
+	position: absolute;
+	background-color: green;
 }
 
 /* -- left css -- */
