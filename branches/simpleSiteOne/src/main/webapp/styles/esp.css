@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 나눔고딕, NanumGothic, 'Open Sans', arial, sans-serif, 굴림,
+		Gulim, 돋움, Dotum;
+	margin: 0;
+	padding: 0;
+	background-image: url("/esp/image/body-bg.png");
+	background-position: left top;
+	background-size: auto;
+}
+
+header {
+	background-image: url("/esp/image/header-bg.png");
+	background-position: left top;
+	background-repeat: repeat-x;
+}
+
+#header .wrapper {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#header .nav-link {
+	float: left;
+	overflow: hidden;
+	height: 41px;
+}
+
+#header .nav-link a.active {
+	-moz-box-shadow: inset -3px 0px 3px 0px rgba(0, 0, 0, 0.1), inset 3px
+		0px 3px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: inset -3px 0px 3px 0px rgba(0, 0, 0, 0.1), inset 3px
+		0px 3px 0px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: inset -3px 0px 3px 0px rgba(0, 0, 0, 0.1), inset 3px 0px
+		3px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: inset -3px 0px 3px 0px rgba(0, 0, 0, 0.1), inset 3px 0px 3px
+		0px rgba(0, 0, 0, 0.1);
+	color: #A5A55E;
+	background-color: rgba(0, 0, 0, 0.05);
+	border-left: 1px solid rgba(0, 0, 0, 0.15);
+	border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* optional style */
+.show-dsp {
+	display: block;
+}
+
+.hide-dsp {
+	display: none;
+}
